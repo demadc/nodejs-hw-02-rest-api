@@ -104,6 +104,7 @@ async function logout(req, res, next) {
   }
 
 async function getCurrent(req, res, next) {
+  console.log('GET request to /auth/current');
     try {
       if (!req.user) {
         return res.status(401).send('Not authorized');
